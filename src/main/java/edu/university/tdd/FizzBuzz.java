@@ -1,0 +1,7 @@
+package edu.university.tdd;
+
+public class FizzBuzz {
+    public static String fizzbuzz(int n) {
+        return null;
+    }
+}
