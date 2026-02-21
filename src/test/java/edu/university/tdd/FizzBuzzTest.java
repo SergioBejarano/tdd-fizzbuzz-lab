@@ -5,53 +5,93 @@ import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {
     @Test
-    void testFizzBuzzReturnsNumber() {
-        assertEquals("1", FizzBuzz.fizzbuzz(1));
+    void shouldReturnNumberWhenNotMultipleOf3Or5() {
+        // Arrange
+        int input = 1;
+        String expected = "1";
+        // Act
+        String actual = FizzBuzz.fizzbuzz(input);
+        // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testFizzBuzzMultiplo3() {
-        assertEquals("Fizz", FizzBuzz.fizzbuzz(3));
+    void shouldReturnFizzWhenMultipleOf3() {
+        int input = 3;
+        String expected = "Fizz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testFizzBuzzMultiplo5() {
-        assertEquals("Buzz", FizzBuzz.fizzbuzz(5));
+    void shouldReturnBuzzWhenMultipleOf5() {
+        int input = 5;
+        String expected = "Buzz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testFizzBuzzMultiplo3y5() {
-        assertEquals("FizzBuzz", FizzBuzz.fizzbuzz(15));
+    void shouldReturnFizzBuzzWhenMultipleOf3And5() {
+        int input = 15;
+        String expected = "FizzBuzz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
     }
 
-        @Test
-        void testFizzBuzzZero() {
-            assertEquals("FizzBuzz", FizzBuzz.fizzbuzz(0));
-        }
+    @Test
+    void shouldReturnFizzBuzzWhenZero() {
+        int input = 0;
+        String expected = "FizzBuzz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
+    }
 
-        @Test
-        void testFizzBuzzNegativeThree() {
-            assertEquals("Fizz", FizzBuzz.fizzbuzz(-3));
-        }
+    @Test
+    void shouldReturnFizzWhenNegativeMultipleOf3() {
+        int input = -3;
+        String expected = "Fizz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
+    }
 
-        @Test
-        void testFizzBuzzNegativeFive() {
-            assertEquals("Buzz", FizzBuzz.fizzbuzz(-5));
-        }
+    @Test
+    void shouldReturnBuzzWhenNegativeMultipleOf5() {
+        int input = -5;
+        String expected = "Buzz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
+    }
 
-        @Test
-        void testFizzBuzzNegativeFifteen() {
-            assertEquals("FizzBuzz", FizzBuzz.fizzbuzz(-15));
-        }
+    @Test
+    void shouldReturnFizzBuzzWhenNegativeMultipleOf3And5() {
+        int input = -15;
+        String expected = "FizzBuzz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
+    }
 
-        @Test
-        void testFizzBuzzLargeNumber() {
-            assertEquals("Fizz", FizzBuzz.fizzbuzz(99999));
-        }
+    @Test
+    void shouldReturnFizzWhenLargeMultipleOf3() {
+        int input = 99999;
+        String expected = "Fizz";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
+    }
 
-        @Test
-        void testFizzBuzzNotMultiple() {
-            assertEquals("2", FizzBuzz.fizzbuzz(2));
-            assertEquals("-2", FizzBuzz.fizzbuzz(-2));
-        }
+    @Test
+    void shouldReturnNumberWhenNotMultipleOf3Or5Positive() {
+        int input = 2;
+        String expected = "2";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldReturnNumberWhenNotMultipleOf3Or5Negative() {
+        int input = -2;
+        String expected = "-2";
+        String actual = FizzBuzz.fizzbuzz(input);
+        assertEquals(expected, actual);
+    }
 }
