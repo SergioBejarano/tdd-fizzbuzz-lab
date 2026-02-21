@@ -1,0 +1,17 @@
+# Maven
+target/
+
+# IDE configuration files
+.idea/
+.classpath
+.project
+.settings/
+.vscode/
+
+# System files
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
