@@ -27,6 +27,18 @@ Compilar y ejecutar todas las pruebas:
 mvn test
 ```
 
+Ejecución completa (incluye verificación de cobertura con JaCoCo) desde la raíz del repo:
+
+```bash
+mvn clean verify
+```
+
+El reporte de cobertura se genera en `target/site/jacoco/index.html`.
+
+<img width="2043" height="464" alt="Captura de pantalla 2026-02-28 224319" src="https://github.com/user-attachments/assets/83577633-6db1-4ce7-aca9-3b58719fc0d7" />
+
+
+
 Generar binarios sin ejecutar pruebas:
 
 ```bash
