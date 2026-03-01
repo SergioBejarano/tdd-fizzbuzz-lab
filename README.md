@@ -61,3 +61,11 @@ src/
 - Números positivos, negativos y cero.
 - Múltiplos grandes para evitar desbordes en reglas sencillas.
 - Comportamiento para no múltiplos (se devuelve el número como texto).
+
+## Integración continua (CI)
+
+Resumen de lo que hace el pipeline en GitHub Actions:
+
+- Se dispara en cada push o pull request hacia `main`.
+- Configura Java 17, ejecuta `mvn test` y falla si alguna prueba de FizzBuzz rompe la lógica.
+- Incluye JaCoCo con umbral de cobertura de instrucciones ≥85%; el pipeline fallará si la cobertura baja de ese valor.
