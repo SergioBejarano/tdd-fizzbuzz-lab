@@ -1,1 +1,63 @@
-# tdd-fizzbuzz-lab
+# TDD FizzBuzz Lab
+
+Ejercicio sencillo para practicar desarrollo guiado por pruebas (TDD) en Java usando JUnit 5. Implementa la clásica kata FizzBuzz y mantiene la solución enfocada en legibilidad y cobertura de casos borde (números negativos, cero y valores grandes).
+
+## Objetivo del proyecto
+
+- Aplicar ciclos TDD (rojo-verde-refactor) en una kata conocida.
+- Ilustrar una estructura mínima con Maven para pruebas unitarias.
+- Mostrar cómo mantener reglas de negocio simples bien cubiertas por tests.
+
+## Tecnologías
+
+- Java 17 (compatible con cualquier versión LTS reciente).
+- Maven 3.8+ para gestionar dependencias y ejecución.
+- JUnit 5 para pruebas unitarias.
+
+## Requisitos previos
+
+1. Java instalado y disponible en el PATH (`java -version`).
+2. Maven instalado (`mvn -version`).
+
+## Ejecutar el proyecto
+
+Compilar y ejecutar todas las pruebas:
+
+```bash
+mvn test
+```
+
+Generar binarios sin ejecutar pruebas:
+
+```bash
+mvn package -DskipTests
+```
+
+## Uso rápido
+
+Llamar directamente al método estático `FizzBuzz.fizzbuzz(int n)`:
+
+```java
+String valor = FizzBuzz.fizzbuzz(15); // devuelve "FizzBuzz"
+```
+
+Reglas implementadas:
+
+- Múltiplo de 3 y 5 -> "FizzBuzz"
+- Múltiplo de 3 -> "Fizz"
+- Múltiplo de 5 -> "Buzz"
+- Cualquier otro entero -> representación como cadena
+
+## Estructura
+
+```
+src/
+	main/java/edu/university/tdd/FizzBuzz.java    # lógica de negocio
+	test/java/edu/university/tdd/FizzBuzzTest.java # pruebas JUnit 5
+```
+
+## Qué cubren las pruebas
+
+- Números positivos, negativos y cero.
+- Múltiplos grandes para evitar desbordes en reglas sencillas.
+- Comportamiento para no múltiplos (se devuelve el número como texto).
